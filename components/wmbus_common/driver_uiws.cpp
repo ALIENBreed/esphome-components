@@ -17,7 +17,7 @@ static bool ok = registerDriver([](DriverInfo &di) {
   di.addLinkMode(LinkMode::C1);
 
   // uiws.xmq: mvt = ZRI,99,07
-  di.addDetection(MANUFACTURER_ZRI, 0x07, 0x99);
+  di.addDetection(MANUFACTURER_ZRI, 0x99, 0x07);
 
   di.setConstructor([](MeterInfo &mi, DriverInfo &di) {
     return std::shared_ptr<Meter>(new Driver(mi, di));
